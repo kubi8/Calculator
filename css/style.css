@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+    font-size: 30px;
+    min-height: 100vh;
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.calculator{
+    border-radius: 5px;
+    box-shadow: inset 0 0 20px 1px rgb(216, 8, 8);
+    width: 300px;
+    height: 460px;
+    padding: 10px;
+}
+.wrapper{
+    border-radius: 2px;
+    width: 280px;
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+
+}
+.display{
+    flex-basis: 25%;
+    background-color: rgb(15, 15, 15);
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: inset 0 0 4px 1px rgb(216, 8, 8);
+    overflow-x: hidden;
+}
+.display-higher{
+    font-size: 2.8rem;
+    font-weight: normal;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0 2px;
+    color: rgb(224, 224, 224);
+}
+.display-lower{
+    font-size: 3.3rem;
+    font-weight: normal;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0 2px;
+    color: rgb(224, 224, 224);
+}
+.spacer{
+    width: 95%;
+    margin: 0 auto;
+    border: 1px dotted rgb(128, 0, 0);
+}
+.keys{
+    flex-basis: 75%;
+    background-color: rgb(15, 15, 15);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(50px, auto)) ;
+    /* grid-template-rows: minmax(70px, auto) repeat(5, 70px); */
+    grid-gap: 10px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 4px 1px rgb(216, 8, 8);
+}
+.key{
+    border-radius: 15px;
+    background-color: rgb(224, 224, 224);
+    box-shadow: 0 0 0 4px transparent;
+    outline: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.key:hover{
+    box-shadow: 0 0 0 4px rgb(156, 0, 0);
+}
+.key:active{
+    background-color: rgb(192, 192, 192);
+    color: rgb(15, 15, 15);
+}
+[data-c]{
+    background-color: rgb(156, 0, 0);
+    color: rgb(224, 224, 224);
+    font-weight: bolder;
+}
+[data-equ]{
+    background-color: rgb(156, 0, 0);
+    grid-column: span 2;
+}
+[data-opr], [data-poi], [data-inv], [data-del]{
+    background-color: rgba(255, 155, 155, 0.9);
+}
